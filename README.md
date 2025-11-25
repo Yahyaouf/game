@@ -11,7 +11,7 @@
 
 **Un jeu éducatif interactif pour apprendre les mathématiques en s'amusant ! 🚀**
 
-**🌐 [Jouer maintenant](https://yahyaouf.github.io/game/) • [Signaler un bug](https://github.com/Yahyaouf/game/issues) • [Demander une fonctionnalité](https://github.com/Yahyaouf/game/issues)**
+**🌐 [Jouer maintenant](https://yahyaouf.github.io/Math_4_Kids/) • [Signaler un bug](https://github.com/Yahyaouf/Math_4_Kids/issues) • [Demander une fonctionnalité](https://github.com/Yahyaouf/Math_4_Kids/issues)**
 
 </div>
 
@@ -52,7 +52,7 @@
 
 ## 🌐 Démo en ligne
 
-🎮 **Jouez directement en ligne :** [https://yahyaouf.github.io/game/](https://yahyaouf.github.io/game/)
+🎮 **Jouez directement en ligne :** [https://yahyaouf.github.io/Math_4_Kids/](https://yahyaouf.github.io/Math_4_Kids/)
 
 Aucune installation nécessaire ! Le jeu fonctionne directement dans votre navigateur.
 
@@ -136,7 +136,7 @@ Parfaitement optimisé pour smartphones et tablettes avec des boutons larges et 
 
 ### Option 1 : Jouer en ligne (Recommandé) 🌐
 
-Accédez directement à : **[https://yahyaouf.github.io/game/](https://yahyaouf.github.io/game/)**
+Accédez directement à : **[https://yahyaouf.github.io/Math_4_Kids/](https://yahyaouf.github.io/Math_4_Kids/)**
 
 ### Option 2 : Installation locale 💻
 
@@ -144,7 +144,7 @@ Accédez directement à : **[https://yahyaouf.github.io/game/](https://yahyaouf.
 
 ```bash
 # 1. Cloner le repository
-git clone https://github.com/Yahyaouf/game.git
+git clone https://github.com/Yahyaouf/Math_4_Kids.git
 
 # 2. Naviguer dans le dossier
 cd game
@@ -156,7 +156,7 @@ cd game
 
 #### Méthode 2 : Téléchargement ZIP
 
-1. Allez sur [https://github.com/Yahyaouf/game](https://github.com/Yahyaouf/game)
+1. Allez sur [https://github.com/Yahyaouf/Math_4_Kids](https://github.com/Yahyaouf/Math_4_Kids)
 2. Cliquez sur le bouton vert **Code** → **Download ZIP**
 3. Extrayez le fichier ZIP
 4. Ouvrez `index.html` dans votre navigateur
@@ -273,7 +273,7 @@ Le projet peut être déployé sur :
 ## 📁 Structure du projet
 
 ```
-game/
+Math_4_Kids/
 │
 ├── index.html                 # Page principale (HTML)
 │
@@ -329,7 +329,7 @@ Les contributions sont les bienvenues ! Voici comment vous pouvez aider à amél
 
 ### Signaler des bugs 🐛
 
-1. Vérifiez que le bug n'a pas déjà été signalé dans les [Issues](https://github.com/Yahyaouf/game/issues)
+1. Vérifiez que le bug n'a pas déjà été signalé dans les [Issues](https://github.com/Yahyaouf/Math_4_Kids/issues)
 2. Créez une nouvelle issue avec :
    - **Titre clair** : Description courte du problème
    - **Description détaillée** : Qu'est-ce qui ne fonctionne pas ?
@@ -351,7 +351,7 @@ Les contributions sont les bienvenues ! Voici comment vous pouvez aider à amél
 1. **Forkez le projet**
 ```bash
 # Cliquez sur "Fork" sur GitHub, puis :
-git clone https://github.com/votre-username/game.git
+git clone https://github.com/votre-username/Math_4_Kids.git
 cd game
 ```
 
@@ -515,8 +515,8 @@ SOFTWARE.
 ### Besoin d'aide ?
 
 1. 📖 Consultez d'abord la [documentation](#-utilisation)
-2. 🔍 Cherchez dans les [Issues existantes](https://github.com/Yahyaouf/game/issues)
-3. ❓ Créez une [nouvelle issue](https://github.com/Yahyaouf/game/issues/new) si votre problème n'a pas été résolu
+2. 🔍 Cherchez dans les [Issues existantes](https://github.com/Yahyaouf/Math_4_Kids/issues)
+3. ❓ Créez une [nouvelle issue](https://github.com/Yahyaouf/Math_4_Kids/issues/new) si votre problème n'a pas été résolu
 
 ### Questions fréquentes (FAQ)
 
@@ -539,13 +539,13 @@ R : Oui ! Voir la [Licence MIT](#-licence)
 
 ## 📊 Statistiques du projet
 
-![GitHub stars](https://img.shields.io/github/stars/Yahyaouf/game?style=social)
-![GitHub forks](https://img.shields.io/github/forks/Yahyaouf/game?style=social)
-![GitHub watchers](https://img.shields.io/github/watchers/Yahyaouf/game?style=social)
+![GitHub stars](https://img.shields.io/github/stars/Yahyaouf/Math_4_Kids?style=social)
+![GitHub forks](https://img.shields.io/github/forks/Yahyaouf/Math_4_Kids?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/Yahyaouf/Math_4_Kids?style=social)
 
-![GitHub last commit](https://img.shields.io/github/last-commit/Yahyaouf/game)
-![GitHub issues](https://img.shields.io/github/issues/Yahyaouf/game)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/Yahyaouf/game)
+![GitHub last commit](https://img.shields.io/github/last-commit/Yahyaouf/Math_4_Kids)
+![GitHub issues](https://img.shields.io/github/issues/Yahyaouf/Math_4_Kids)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/Yahyaouf/Math_4_Kids)
 
 ---
 
