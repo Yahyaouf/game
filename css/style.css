@@ -1,0 +1,566 @@
+/* ==========================================
+   MATH 4 KIDS - Stylesheet
+   Version 2.0
+   Jeu éducatif pour apprendre les maths
+   ========================================== */
+
+/* ==================== RESET & BASE ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Luckiest Guy", cursive;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ==================== HEADER ==================== */
+.header {
+    background: linear-gradient(90deg, #ff6b6b 0%, #ee5a6f 100%);
+    color: white;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+}
+
+/* ==================== STATS ==================== */
+.stats {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.stat-box {
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s;
+}
+
+.streak {
+    background: #ffd93d;
+    color: #d63031;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { 
+        transform: scale(1); 
+    }
+    50% { 
+        transform: scale(1.05); 
+    }
+}
+
+/* ==================== NAVIGATION OPERATIONS ==================== */
+nav {
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.op {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1.3rem;
+    transition: all 0.3s;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    font-family: "Luckiest Guy", cursive;
+}
+
+.op:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+.op.active {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    transform: scale(1.05);
+    box-shadow: 0 0 0 4px white;
+}
+
+/* ==================== DIFFICULTY SELECTOR ==================== */
+.difficulty {
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 20px;
+}
+
+.diff-btn {
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: 3px solid transparent;
+    background: rgba(255,255,255,0.3);
+    color: white;
+    cursor: pointer;
+    font-family: "Luckiest Guy", cursive;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.diff-btn:hover {
+    transform: scale(1.05);
+}
+
+.diff-btn.active {
+    border-color: white;
+    transform: scale(1.1);
+}
+
+.diff-btn.easy.active { 
+    background: #00b894;
+    box-shadow: 0 5px 15px rgba(0, 184, 148, 0.5);
+}
+
+.diff-btn.medium.active { 
+    background: #fdcb6e;
+    box-shadow: 0 5px 15px rgba(253, 203, 110, 0.5);
+}
+
+.diff-btn.hard.active { 
+    background: #d63031;
+    box-shadow: 0 5px 15px rgba(214, 48, 49, 0.5);
+}
+
+/* ==================== GAME CONTAINER ==================== */
+.game-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* ==================== CALCULATE BOX ==================== */
+.calculate {
+    flex: 1;
+    min-width: 300px;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+    border-radius: 30px;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 350px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+.equation {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 5rem;
+    justify-content: center;
+}
+
+.message {
+    font-size: 2.5rem;
+    color: #667eea;
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* Couleurs des éléments de l'équation */
+.num1 { 
+    color: #00b894;
+    text-shadow: 2px 2px 4px rgba(0, 184, 148, 0.3);
+}
+
+.operation { 
+    color: #6c5ce7;
+    text-shadow: 2px 2px 4px rgba(108, 92, 231, 0.3);
+}
+
+.num2 { 
+    color: #fdcb6e;
+    text-shadow: 2px 2px 4px rgba(253, 203, 110, 0.3);
+}
+
+.equal { 
+    color: #d63031;
+    text-shadow: 2px 2px 4px rgba(214, 48, 49, 0.3);
+}
+
+.result { 
+    color: #0984e3;
+    text-shadow: 2px 2px 4px rgba(9, 132, 227, 0.3);
+}
+
+/* ==================== SOLUTION BUTTONS ==================== */
+.solution {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-width: 250px;
+}
+
+.sol {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-size: 3.5rem;
+    padding: 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    border: none;
+    font-family: "Luckiest Guy", cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 110px;
+}
+
+.sol:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+.sol:active {
+    transform: translateY(0) scale(0.98);
+}
+
+/* Feedback visuel des réponses */
+.sol.correct {
+    animation: correct 0.5s;
+    background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+    box-shadow: 0 0 30px rgba(0, 184, 148, 0.8);
+}
+
+.sol.wrong {
+    animation: shake 0.5s;
+    background: linear-gradient(135deg, #d63031 0%, #ff7675 100%);
+}
+
+/* ==================== ANIMATIONS ==================== */
+@keyframes correct {
+    0%, 100% { 
+        transform: scale(1); 
+    }
+    25% { 
+        transform: scale(1.1) rotate(5deg); 
+    }
+    50% { 
+        transform: scale(1.15) rotate(0deg); 
+    }
+    75% { 
+        transform: scale(1.1) rotate(-5deg); 
+    }
+}
+
+@keyframes shake {
+    0%, 100% { 
+        transform: translateX(0); 
+    }
+    10%, 30%, 50%, 70%, 90% { 
+        transform: translateX(-10px); 
+    }
+    20%, 40%, 60%, 80% { 
+        transform: translateX(10px); 
+    }
+}
+
+/* ==================== SOUND TOGGLE ==================== */
+.sound-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.8rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.sound-toggle:hover {
+    transform: scale(1.1) rotate(15deg);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+.sound-toggle:active {
+    transform: scale(0.95);
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+
+/* Tablettes et petits écrans */
+@media (max-width: 768px) {
+    h1 { 
+        font-size: 2rem; 
+    }
+    
+    .header-content {
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .equation { 
+        font-size: 3rem; 
+        gap: 10px; 
+    }
+    
+    .message { 
+        font-size: 1.8rem; 
+    }
+    
+    .sol { 
+        font-size: 2.5rem; 
+        padding: 20px;
+        min-height: 90px;
+    }
+    
+    .op { 
+        font-size: 1rem; 
+        padding: 10px 20px; 
+    }
+    
+    .stat-box {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+    
+    .sound-toggle {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+    
+    .calculate {
+        padding: 30px 20px;
+    }
+}
+
+/* Smartphones */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+    
+    .equation {
+        font-size: 2rem;
+        gap: 8px;
+    }
+    
+    .message {
+        font-size: 1.3rem;
+    }
+    
+    .sol {
+        font-size: 2rem;
+        padding: 15px;
+        min-height: 80px;
+    }
+    
+    .calculate {
+        padding: 20px 15px;
+        min-height: 250px;
+    }
+    
+    .op {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+    
+    .diff-btn {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+    
+    .stat-box {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+    
+    .game-container {
+        gap: 15px;
+        padding: 0 15px;
+    }
+    
+    .solution {
+        min-width: 100%;
+        gap: 10px;
+    }
+}
+
+/* Très petits écrans */
+@media (max-width: 360px) {
+    h1 {
+        font-size: 1.3rem;
+    }
+    
+    .equation {
+        font-size: 1.5rem;
+    }
+    
+    .message {
+        font-size: 1.1rem;
+    }
+    
+    .sol {
+        font-size: 1.8rem;
+    }
+}
+
+/* Mode paysage pour mobiles */
+@media (max-height: 500px) and (orientation: landscape) {
+    .header {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    nav {
+        margin: 10px auto;
+    }
+    
+    .difficulty {
+        margin: 10px auto;
+    }
+    
+    .calculate {
+        min-height: 200px;
+        padding: 20px;
+    }
+    
+    .equation {
+        font-size: 2rem;
+    }
+    
+    .sol {
+        font-size: 2rem;
+        padding: 15px;
+        min-height: 70px;
+    }
+    
+    .game-container {
+        margin: 15px auto;
+    }
+}
+
+/* ==================== PRINT STYLES ==================== */
+@media print {
+    .sound-toggle,
+    .stats {
+        display: none;
+    }
+    
+    body {
+        background: white;
+    }
+    
+    .header {
+        background: #ff6b6b;
+        color: white;
+    }
+}
+
+/* ==================== ACCESSIBILITÉ ==================== */
+
+/* Focus visible pour la navigation au clavier */
+.op:focus,
+.diff-btn:focus,
+.sol:focus,
+.sound-toggle:focus {
+    outline: 3px solid #ffd93d;
+    outline-offset: 3px;
+}
+
+/* Mode sombre (si le système le préfère) */
+@media (prefers-color-scheme: dark) {
+    /* Le design actuel est déjà sombre, donc pas de changements nécessaires */
+}
+
+/* Réduction des animations si l'utilisateur préfère moins de mouvement */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .op:hover,
+    .sol:hover,
+    .diff-btn:hover,
+    .sound-toggle:hover {
+        transform: none;
+    }
+}
+
+/* ==================== UTILITAIRES ==================== */
+
+/* Classe pour cacher des éléments visuellement mais les garder pour les lecteurs d'écran */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Empêcher la sélection de texte sur les boutons */
+.op,
+.diff-btn,
+.sol,
+.sound-toggle {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+/* ==================== FIN DU FICHIER ==================== */
