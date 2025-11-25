@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math 4 Kids - Apprends les maths en t'amusant !</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="header-content">
+            <h1>🎓 MATH 4 KIDS</h1>
+            <div class="stats">
+                <div class="stat-box">
+                    🏆 <span id="score">0</span>/<span id="attempts">0</span>
+                </div>
+                <div class="stat-box">
+                    🎯 <span id="accuracy">0</span>%
+                </div>
+                <div class="stat-box streak" id="streakBox" style="display: none;">
+                    🔥 <span id="streak">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Operations -->
+    <nav>
+        <button class="op" id="add" data-op="+">➕ Addition</button>
+        <button class="op" id="subtract" data-op="-">➖ Soustraction</button>
+        <button class="op" id="multiply" data-op="×">✖️ Multiplication</button>
+        <button class="op" id="divide" data-op="÷">➗ Division</button>
+    </nav>
+
+    <!-- Difficulty -->
+    <div class="difficulty">
+        <button class="diff-btn easy active" data-level="1">😊 Facile</button>
+        <button class="diff-btn medium" data-level="2">😎 Moyen</button>
+        <button class="diff-btn hard" data-level="3">🔥 Difficile</button>
+    </div>
+
+    <!-- Game -->
+    <div class="game-container">
+        <div class="calculate">
+            <div class="message" id="message">👋 Salut ! Choisis une opération pour commencer 👆</div>
+            <div class="equation" id="equation" style="display: none;">
+                <span class="num1" id="num1"></span>
+                <span class="operation" id="operation"></span>
+                <span class="num2" id="num2"></span>
+                <span class="equal">=</span>
+                <span class="result">?</span>
+            </div>
+        </div>
+
+        <div class="solution">
+            <button class="sol" id="sol1"></button>
+            <button class="sol" id="sol2"></button>
+            <button class="sol" id="sol3"></button>
+        </div>
+    </div>
+
+    <!-- Sound Toggle -->
+    <button class="sound-toggle" id="soundToggle" title="Activer/Désactiver le son">
+        🔊
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
